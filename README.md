@@ -6,7 +6,7 @@ The repository has two different solutions:
 - ShoppingList: service endpoint.
 - checkout-net-library-master: checkout library modified to interact with the shopping list endpoint.
 
-The Shopping list solution was created with visual studio 2015 and has the following frameworks/libraries:
+The Shopping list solution was created with visual studio 2015 and uses the following:
 - .Net Framework 4.6
 - Database file (App_Data/ShoppingListDb.mdf) to hold the items list and consumers list for the API
 - Entity Framework 6
@@ -21,9 +21,9 @@ Two configurations were added to support the shopping list API:
 ```
 
 ## Shopping List API endpoints:
-- GET api/shoppinglist
-- GET api/shoppinglist/{id}
-- POST api/shoppinglist/
-- PUT api/shoppinglist/{id}
-- DELETE api/shoppinglist/{id}
+- GET api/shoppinglist - List all items in the shopping list
+- GET api/shoppinglist/{id} - Get one specific item
+- POST api/shoppinglist/ - Create item
+- PUT api/shoppinglist/{id} - Update item by id
+- DELETE api/shoppinglist/{id} - Delete item by id
 
