@@ -15,13 +15,15 @@ The Shopping list solution was created with visual studio 2015 and has the follo
 ## Authentication
 Since the API is going to be consumed through a friendly route, Basic authentication was implemented using a custom filter.
 Two configurations were added to support the shopping list API:
+```
     <add key="Checkout.ConsumerName" value="" />
     <add key="Checkout.Environment" value="ShoppingList" />
-    
+```
+
 ## Shopping List API endpoints:
-GET api/shoppinglist
-GET api/shoppinglist/{id}
-POST api/shoppinglist/
-PUT api/product/{id}
-DELETE api/product/{id}
+- GET api/shoppinglist
+- GET api/shoppinglist/{id}
+- POST api/shoppinglist/
+- PUT api/shoppinglist/{id}
+- DELETE api/shoppinglist/{id}
 
