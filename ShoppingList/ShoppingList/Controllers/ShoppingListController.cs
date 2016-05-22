@@ -30,10 +30,9 @@ namespace ShoppingList.Controllers
             {
                 var itemList = items as List<Item> ?? items.ToList();
                 if (itemList.Any())
-                    return new ItemList {Items = itemList}; //Request.CreateResponse(HttpStatusCode.OK, itemList);
+                    return new ItemList {Items = itemList};
             }
             throw new HttpException();
-            //return Request.CreateErrorResponse(HttpStatusCode.NotFound, "No items found");
         }
 
         // GET api/shoppinglist/5
@@ -56,7 +55,7 @@ namespace ShoppingList.Controllers
             return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Item not created");
         }
 
-        // PUT api/product/{id}
+        // PUT api/shoppinglist/{id}
         [HttpPut]
         public HttpResponseMessage Put(int id, [FromBody]Item item)
         {
@@ -68,7 +67,7 @@ namespace ShoppingList.Controllers
             return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Item not found");
         }
 
-        // DELETE api/product/{id}
+        // DELETE api/shoppinglist/{id}
         [HttpDelete]
         public HttpResponseMessage Delete(int id)
         {
